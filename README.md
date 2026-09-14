@@ -1,4 +1,4 @@
-# cafe-sales-data-cleaning
+# Actividad 4 - Limpieza de datos (dirty_cafe_sales.csv)
 Actividad 4 de la matería de análisis y visualización de la información
 
 Bueno suponiendo que necesitamos todas las columnas, se limpiaron de la siguiente manera, comenzando con una base de 10,000 filas (donde mencionaré que tratandose de datos de ventas, eliminar filas sería la última opción):
