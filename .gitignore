@@ -1,0 +1,15 @@
+cat << 'EOF' > .gitignore
+# Entorno virtual
+.venv/
+env/
+venv/
+
+# Temporales de Python y Jupyter
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# Configuración de editores
+.vscode/
+.idea/
+EOF
