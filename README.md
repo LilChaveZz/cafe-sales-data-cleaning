@@ -37,3 +37,32 @@ Donde observamos que en realidad solo podemos mapear errores en *Item* que tenga
 ### 5. Total Spent
 
 Aquí tenemos originalmente 5.02% (502 registros) con NaN, sin embargo quiero verificar con los valores que se pueda que el numero que tienen sea correcto, ya que es un campo que viene de calcular Quantity x Price Per Unit, esto indica que 9498(94.98%) valores ya estaban correctos, y de nuestros 502 con NaN pudimos rellenar 462, lo que deja solo 40 valores vacíos que no se pudieron calcular, dejandonos con un 99.6% completo
+
+### 6. Payment Method
+
+En payment method no hay mucho que hacer, tenemos 3178 (31.78%) de registros con NaN (tras mandar los Error y Unkwnown), lo cual nos deja con el 68.22% de datos disponibles sin modo de rescatar los otros
+
+Respecto al metodo de pago, originalmente eran:
+NaN 2579
+Digital Wallet 2291
+Credit Card 2273
+Cash 2258
+ERROR 306
+UNKNOWN 293
+Y cambié los ERROR y UNKNOWN a NaN:
+NaN 3178
+### 7. Location
+
+Aquí tras estandarizar Errores y Unknown a NaN, tenemos 3961 (39.61%) de NaN dejandonos con 6039 (60.39%) de datos válidos
+
+### 8. Transaction Date
+
+Aquí comenzamos viendo que es de tipo str, habrá que pasarla a datetime (tenemos un formato AAAA-MM-DD, lo que lo hará sencillo) y 460 (4.6%) de registros no validos, procederé convirtiendola a datetime
+
+### 9. Verificación Final
+
+Como paso final revisé la cantidad de valores faltantes por columna y convertí en los de str a N/A que me parece mas adecuado (esto es pura opinion personal)
+
+### 10. Exportación
+
+Lo mandé a cafe_sales_cleaned.csv
